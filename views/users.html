@@ -1,0 +1,49 @@
+% include("header", title="Users")
+
+<main id="usersMain">
+  <h1>
+    Users & Sessions :
+  </h1>
+  <div>
+    <div id="users">
+      <h1>Users</h1>
+      % for user in users:
+      <div class="user">
+        <div> ID : {{user["id"]}} </div>
+        <div> email : {{user["email"]}} </div>
+        <div> pass : {{user["password"]}}</div>
+
+      </div>
+      % end
+    </div>
+
+    % if users == []:
+    <div>
+      no users registered
+    </div>
+    % end
+
+
+    <div id="sessions">
+      <h1>Sessions</h1>
+
+      % for session in sessions:
+      <div class="user">
+        <div> ID : {{session["user_id"]}}</div>
+        <div> email : {{session["user_email"]}}</div>
+        <div> time : {{session["iat"]}}</div>
+
+      </div>
+      % end
+    </div>
+
+    % if sessions == []:
+    <div>
+      no session open
+    </div>
+    % end
+  </div>
+</main>
+
+
+% include("footer")

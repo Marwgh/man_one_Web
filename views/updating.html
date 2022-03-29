@@ -1,0 +1,32 @@
+% include("header" , title="Tweets")
+
+
+<main id="updatingMain">
+  <h1>Updating</h1>
+  <div>
+    <form action="/updating-validation" method="POST">
+      % if error == "invalid-update":
+      <div>
+        Please updated tweet proprely
+      </div>
+      % end
+      <div>
+        <label for="tweet_title">Title :</label>
+        <input type="text" name="tweet_title" value="{{ updated_title or ''}}">
+      </div>
+      <div>
+        <label for="tweet_description">Description :</label>
+        <input name="tweet_description" id="" cols="30" rows="10" value="{{ updated_description or ''}}">
+      </div>
+      <input type="hidden" name="time" value="{{time}}">
+      <input type="hidden" name="id" value="{{id}}">
+      <button>Change</button>
+
+    </form>
+
+  </div>
+
+
+</main>
+
+% include("footer")

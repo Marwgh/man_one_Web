@@ -1,0 +1,37 @@
+% include("header" , title="Tweets")
+
+
+<main id="tweetMain">
+  <h1>Fake Tweets</h1>
+  <div>
+    Want to <a href="/create">create</a> a tweet ?
+    % for tweet in tweets:
+
+
+    <section class="tweet">
+      <h1>{{tweet["title"]}}</h1>
+      <p id="Tweet_time">{{tweet["iat"]}}</p>
+      <p>{{tweet["description"]}} </p>
+      <article>
+        <form action="/delete/{{tweet['id']}}" method="POST">
+          <button>🗑️</button>
+        </form>
+        <a
+          href="/updating?title={{tweet['title']}}&description={{tweet['description']}}&iat={{tweet['iat']}}&id={{tweet['id']}}">✏️</a>
+      </article>
+
+    </section>
+    % end
+
+
+    % if tweets == []:
+    <div>
+      no tweets registered
+    </div>
+    % end
+  </div>
+  </div>
+
+</main>
+
+% include("footer")

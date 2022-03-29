@@ -1,0 +1,30 @@
+% include("header", title="Sign up")
+
+<main id="signupMain">
+  <h1>
+    Sign-up
+  </h1>
+  <div>
+    <form action="/signup" method="POST">
+      <div>
+        <label for="user-name">Full name</label>
+        <input type="text" name="user_name" placeholder="Full name">
+      </div>
+
+      <div>
+        <label for="user-email">Email</label>
+        <input type="text" name="user_email" placeholder="email">
+      </div>
+
+      <div>
+        <label for="user-password">Password</label>
+        <input type="text" name="user_password" placeholder="password">
+      </div>
+
+      <button>Sign up </button>
+    </form>
+  </div>
+</main>
+
+
+% include("footer")

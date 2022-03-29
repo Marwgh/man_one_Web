@@ -1,0 +1,435 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+body{
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+button:hover{
+  cursor: pointer;
+}
+/*HEADER  HEADER   HEADER   HEADER   HEADER   HEADER  HEADER  HEADER   HEADER   HEADER   HEADER   HEADER   HEADER  HEADER   HEADER   HEADER   HEADER   HEADER */
+nav {
+  height: 5vw;
+  width: 100%;
+  background-color: #00acee; 
+  display: grid;
+  grid-template-columns: 100fr 100fr 100fr 100fr 100fr 100fr ;
+  justify-content: center;
+  align-items: center;
+}
+
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: 400;
+  font-size: 1.8vw;
+  margin: auto;
+}
+
+
+nav a:hover {
+  font-weight: 500;
+  font-size: 1.88vw;
+
+}
+
+/*HOME MAIN   HOME MAIN   HOME MAIN  HOME MAIN   HOME MAIN   HOME MAIN  HOME MAIN   HOME MAIN   HOME MAIN  HOME MAIN   HOME MAIN   HOME MAIN*/
+
+
+
+#homeMain {
+  color: white;
+}
+
+#homeMain h1{
+  font-size: 3vw;
+  color: white;
+  position: absolute;
+  left: 20vw;
+  top: 10vw;
+  text-shadow: 2px 2px grey;
+
+}
+
+#homeMain > div{
+  height: 100vh;
+  width: 50vw;
+  background-color: black;
+  margin: auto;
+}
+
+
+/*SIGNUP MAIN  SIGNUP MAIN  SIGNUP MAIN  SIGNUP MAIN  SIGNUP MAIN  SIGNUP MAIN  SIGNUP MAIN  SIGNUP MAIN  SIGNUP MAIN  SIGNUP MAIN  SIGNUP MAIN  SIGNUP MAIN*/
+
+
+
+#signupMain {
+  color: white;
+}
+
+#signupMain > h1 {
+  margin: 4vw 0 0 10vw;
+  font-size: 2vw;
+}
+
+
+#signupMain > div {
+  height: 100vh;
+  width: 50vw;
+  background-color: black;
+  margin: auto;
+  margin-top: -6.2vw;
+  padding: 1vw;
+  padding-top: 5vw;
+}
+
+#signupMain form {
+  display: grid;
+  background-color: white;
+  width: 40vw;
+  height: 50vh;
+  margin: 0 4vw 0 4vw;
+  border-radius: 0.4vw;
+
+}
+
+#signupMain form div {
+  padding: 1vw;
+  display: grid;
+  
+}
+
+#signupMain form div input{
+  padding: 1vw;
+  border-radius: 0.4vw;
+  border: none;
+  background-color: rgba(128, 128, 128, 0.486);
+}
+
+#signupMain form button {
+  appearance: none;
+  border: none;
+  border-radius: 0.4vw;
+}
+
+/* LOGIN MAIN  LOGIN MAIN  LOGIN MAIN  LOGIN MAIN  LOGIN MAIN  LOGIN MAIN  LOGIN MAIN  LOGIN MAIN  LOGIN MAIN  LOGIN MAIN  LOGIN MAIN  LOGIN MAIN*/
+
+
+#loginMain {
+  color: white;
+}
+
+#loginMain > h1 {
+  margin: 4vw 0 0 10vw;
+  font-size: 2vw;
+}
+
+
+#loginMain > div {
+  height: 100vh;
+  width: 50vw;
+  background-color: black;
+  margin: auto;
+  margin-top: -6.2vw;
+  padding: 1vw;
+  padding-top: 5vw;
+
+}
+
+#loginMain form {
+  display: grid;
+  background-color: white;
+  width: 40vw;
+  height: 35vh;
+  margin: 0 4vw 0 4vw;
+  border-radius: 0.4vw;
+  color: black;
+
+}
+
+#loginMain form div {
+  padding: 1vw;
+  display: grid;
+  
+}
+
+#loginMain form div input{
+  padding: 1vw;
+  border-radius: 0.4vw;
+  border: none;
+  background-color: rgba(128, 128, 128, 0.486);
+}
+
+#loginMain form button {
+  appearance: none;
+  border: none;
+  border-radius: 0.4vw;
+}
+
+
+/*USER MAIN  USER MAIN  USER MAIN  USER MAIN  USER MAIN  USER MAIN  USER MAIN  USER MAIN  USER MAIN  USER MAIN  USER MAIN  USER MAIN*/
+
+
+#usersMain {
+  color: white;
+}
+
+#usersMain > h1 {
+  margin: 4vw 0 0 7vw;
+  font-size: 2vw;
+}
+
+#usersMain > div {
+  height: 100vh;
+  width: 50vw;
+  background-color: black;
+  margin: auto;
+  margin-top: -6.2vw;
+  padding: 1vw;
+  padding-top: 5vw;
+}
+
+#usersMain > div p {
+  margin-top: 2vw;
+}
+
+#sessions {
+  margin-top: 1vw
+}
+
+
+/*LOGOUT MAIN  LOGOUT MAIN  LOGOUT MAIN  LOGOUT MAIN  LOGOUT MAIN  LOGOUT MAIN  LOGOUT MAIN  LOGOUT MAIN  LOGOUT MAIN  LOGOUT MAIN  LOGOUT MAIN  LOGOUT MAIN*/
+
+
+#logoutMain {
+  color: white;
+}
+
+#logoutMain > h1 {
+  margin: 4vw 0 0 10vw;
+  font-size: 2vw;
+}
+
+#logoutMain> div {
+  height: 100vh;
+  width: 50vw;
+  background-color: black;
+  margin: auto;
+  margin-top: -6.2vw;
+  padding: 1vw;
+  padding-top: 5vw;
+}
+#logoutMain > div p {
+  margin-top: 2vw;
+}
+
+/*TWEETS  TWEETS  TWEETS  TWEETS  TWEETS  TWEETS  TWEETS  TWEETS  TWEETS  TWEETS  TWEETS  TWEETS  TWEETS  TWEETS*/
+
+#tweetMain {
+  color: white;
+}
+
+#tweetMain > h1 {
+  margin: 4vw 0 0 10vw;
+  font-size: 2vw;
+}
+
+#tweetMain > div {
+  height: 100vh;
+  width: 50vw;
+  background-color: black;
+  margin: auto;
+  margin-top: -6.2vw;
+  padding: 1vw;
+  padding-top: 5vw;
+}
+#tweetMain > div p {
+  margin-top: 2vw;
+}
+
+#tweetMain .tweet {
+  margin-top: 1vw;
+}
+
+#tweetMain a {
+  text-decoration: none;
+}
+#tweetMain form button {
+  appearance: none;
+  background-color: transparent;
+  border: none;
+}
+
+/*TWEET TEMPLATE  TWEET TEMPLATE  TWEET TEMPLATE*/
+.tweet {
+  width: 40vw;
+  height: 10vw;
+  background: rgb(63, 63, 63);
+  margin: auto;
+  padding: 0.5vw;
+  border-radius: 0.5vw;
+  position: relative;
+}
+
+.tweet #Tweet_time {
+  position: absolute;
+  bottom: 1vw;
+  right:1vw;
+  margin: 0;
+  font-size: 0.7vw;
+  color: grey;
+}
+
+.tweet article {
+  display: flex;
+  position: absolute;
+  top: 0.5vw;
+  right: 0.5vw;
+}
+
+/*CREATE TWEETS  CREATE TWEETS  CREATE TWEETS  CREATE TWEETS  CREATE TWEETS  CREATE TWEETS  CREATE TWEETS  CREATE TWEETS*/
+
+
+
+#createMain {
+  color: white;
+}
+
+#createMain  > h1 {
+  margin: 4vw 0 0 8vw;
+  font-size: 2vw;
+}
+
+#createMain  > div {
+  height: 100vh;
+  width: 50vw;
+  background-color: black;
+  margin: auto;
+  margin-top: -6.2vw;
+  padding: 1vw;
+  padding-top: 5vw;
+}
+#createMain  > div p {
+  margin-top: 2vw;
+}
+
+#createMain form {
+  display: grid;
+  background-color: white;
+  width: 40vw;
+  height: 45vh;
+  margin: 0 4vw 0 4vw;
+  border-radius: 0.4vw;
+  color: black;
+
+}
+
+#createMain form div {
+  padding: 1vw;
+  display: grid;
+  
+}
+
+#createMain form div input{
+  padding: 1vw;
+  border-radius: 0.4vw;
+  border: none;
+  background-color: rgba(128, 128, 128, 0.486);
+}
+#createMain form div textarea{
+  padding: 1vw;
+  border-radius: 0.4vw;
+  border: none;
+  background-color: rgba(128, 128, 128, 0.486);
+}
+
+#createMain form button {
+  appearance: none;
+  border: none;
+  border-radius: 0.4vw;
+  font-size: 1.2vw;
+}
+
+
+
+
+
+
+/*UPDATING  UPDATING UPDATING  UPDATING  UPDATING  UPDATING  UPDATING UPDATING  UPDATING  UPDATING  UPDATING  UPDATING UPDATING  UPDATING  UPDATING*/
+
+
+
+#updatingMain {
+  color: white;
+}
+
+#updatingMain > h1 {
+  margin: 4vw 0 0 10vw;
+  font-size: 2vw;
+}
+
+#updatingMain> div {
+  height: 100vh;
+  width: 50vw;
+  background-color: black;
+  margin: auto;
+  margin-top: -6.2vw;
+  padding: 1vw;
+  padding-top: 5vw;
+}
+#updatingMain > div p {
+  margin-top: 2vw;
+}
+
+#updatingMain form {
+  display: grid;
+  background-color: white;
+  width: 40vw;
+  height: 45vh;
+  margin: 0 4vw 0 4vw;
+  border-radius: 0.4vw;
+  color: black;
+
+}
+
+
+#updatingMain form div {
+  padding: 1vw;
+  display: grid;
+  
+}
+
+#updatingMain form div input{
+  padding: 1vw;
+  border-radius: 0.4vw;
+  border: none;
+  background-color: rgba(128, 128, 128, 0.486);
+}
+#updatingMain form div textarea{
+  padding: 1vw;
+  border-radius: 0.4vw;
+  border: none;
+  background-color: rgba(128, 128, 128, 0.486);
+}
+
+#updatingMain form button {
+  appearance: none;
+  border: none;
+  border-radius: 0.4vw;
+  font-size: 1.2vw;
+}
+
+/*FOOTER  FOOTER   FOOTER   FOOTER   FOOTER   FOOTER   FOOTER   FOOTER   FOOTER   FOOTER   FOOTER   FOOTER   FOOTER */
+
+footer{
+  background-color: #00acee;
+  width: 100%;
+  height:2vw;
+}
