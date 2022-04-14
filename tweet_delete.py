@@ -1,20 +1,22 @@
-from bottle import post , redirect , response
+from bottle import  delete , redirect , response
 import g
 
 
-@post("/delete/<tweet_id>")
+@delete("/delete/<tweet_id>")
 def _(tweet_id):
   #VALIDATION 
-  try:
-    if not tweet_id :
-      return redirect("/tweet")
+
+
+  if not tweet_id :
+    return redirect("/tweet")
   
+  try:
+    print("#"*30)
     print(tweet_id)
     print("#"*30)
     for  index ,tweet in enumerate(g.TWEETS):
       if tweet["id"] == tweet_id:
           g.TWEETS.pop(index)
-          return redirect("/tweet")
           
   except Exception as ex:
     print(ex)

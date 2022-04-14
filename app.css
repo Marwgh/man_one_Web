@@ -1,4 +1,4 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -6,20 +6,22 @@
 }
 
 
-body{
+body {
   background-color: rgba(0, 0, 0, 0.5);
+  overflow-x: hidden;
 }
 
-button:hover{
+button:hover {
   cursor: pointer;
 }
+
 /*HEADER  HEADER   HEADER   HEADER   HEADER   HEADER  HEADER  HEADER   HEADER   HEADER   HEADER   HEADER   HEADER  HEADER   HEADER   HEADER   HEADER   HEADER */
 nav {
   height: 5vw;
   width: 100%;
-  background-color: #00acee; 
+  background-color: #00acee;
   display: grid;
-  grid-template-columns: 100fr 100fr 100fr 100fr 100fr 100fr ;
+  grid-template-columns: 100fr 100fr 100fr 100fr 100fr 100fr;
   justify-content: center;
   align-items: center;
 }
@@ -48,7 +50,7 @@ nav a:hover {
   color: white;
 }
 
-#homeMain h1{
+#homeMain>h1 {
   font-size: 3vw;
   color: white;
   position: absolute;
@@ -58,11 +60,18 @@ nav a:hover {
 
 }
 
-#homeMain > div{
+#homeMain>div {
   height: 100vh;
   width: 50vw;
   background-color: black;
   margin: auto;
+  padding-top: 5vw;
+  overflow-y: scroll;
+}
+
+
+#homeMain .tweet {
+  margin-top: 5vw;
 }
 
 
@@ -74,13 +83,18 @@ nav a:hover {
   color: white;
 }
 
-#signupMain > h1 {
+
+#signupMain label {
+  color: black;
+}
+
+#signupMain>h1 {
   margin: 4vw 0 0 10vw;
   font-size: 2vw;
 }
 
 
-#signupMain > div {
+#signupMain>div {
   height: 100vh;
   width: 50vw;
   background-color: black;
@@ -88,6 +102,7 @@ nav a:hover {
   margin-top: -6.2vw;
   padding: 1vw;
   padding-top: 5vw;
+  overflow-y: scroll;
 }
 
 #signupMain form {
@@ -103,10 +118,10 @@ nav a:hover {
 #signupMain form div {
   padding: 1vw;
   display: grid;
-  
+
 }
 
-#signupMain form div input{
+#signupMain form div input {
   padding: 1vw;
   border-radius: 0.4vw;
   border: none;
@@ -126,13 +141,13 @@ nav a:hover {
   color: white;
 }
 
-#loginMain > h1 {
+#loginMain>h1 {
   margin: 4vw 0 0 10vw;
   font-size: 2vw;
 }
 
 
-#loginMain > div {
+#loginMain>div {
   height: 100vh;
   width: 50vw;
   background-color: black;
@@ -140,6 +155,7 @@ nav a:hover {
   margin-top: -6.2vw;
   padding: 1vw;
   padding-top: 5vw;
+  overflow-y: scroll;
 
 }
 
@@ -157,10 +173,10 @@ nav a:hover {
 #loginMain form div {
   padding: 1vw;
   display: grid;
-  
+
 }
 
-#loginMain form div input{
+#loginMain form div input {
   padding: 1vw;
   border-radius: 0.4vw;
   border: none;
@@ -181,12 +197,12 @@ nav a:hover {
   color: white;
 }
 
-#usersMain > h1 {
+#usersMain>h1 {
   margin: 4vw 0 0 7vw;
   font-size: 2vw;
 }
 
-#usersMain > div {
+#usersMain>div {
   height: 100vh;
   width: 50vw;
   background-color: black;
@@ -194,9 +210,10 @@ nav a:hover {
   margin-top: -6.2vw;
   padding: 1vw;
   padding-top: 5vw;
+  overflow-y: scroll;
 }
 
-#usersMain > div p {
+#usersMain>div p {
   margin-top: 2vw;
 }
 
@@ -212,12 +229,12 @@ nav a:hover {
   color: white;
 }
 
-#logoutMain > h1 {
+#logoutMain>h1 {
   margin: 4vw 0 0 10vw;
   font-size: 2vw;
 }
 
-#logoutMain> div {
+#logoutMain>div {
   height: 100vh;
   width: 50vw;
   background-color: black;
@@ -225,8 +242,10 @@ nav a:hover {
   margin-top: -6.2vw;
   padding: 1vw;
   padding-top: 5vw;
+  overflow-y: scroll;
 }
-#logoutMain > div p {
+
+#logoutMain>div p {
   margin-top: 2vw;
 }
 
@@ -236,12 +255,12 @@ nav a:hover {
   color: white;
 }
 
-#tweetMain > h1 {
+#tweetMain>h1 {
   margin: 4vw 0 0 10vw;
   font-size: 2vw;
 }
 
-#tweetMain > div {
+#tweetMain>div {
   height: 100vh;
   width: 50vw;
   background-color: black;
@@ -249,8 +268,10 @@ nav a:hover {
   margin-top: -6.2vw;
   padding: 1vw;
   padding-top: 5vw;
+  overflow-y: scroll;
 }
-#tweetMain > div p {
+
+#tweetMain>div p {
   margin-top: 2vw;
 }
 
@@ -261,11 +282,21 @@ nav a:hover {
 #tweetMain a {
   text-decoration: none;
 }
+
 #tweetMain form button {
   appearance: none;
   background-color: transparent;
   border: none;
 }
+
+#tweetMain input[type=file] {
+  display: none;
+}
+
+#tweetMain div:last-of-type label {
+  cursor: pointer;
+}
+
 
 /*TWEET TEMPLATE  TWEET TEMPLATE  TWEET TEMPLATE*/
 .tweet {
@@ -278,10 +309,10 @@ nav a:hover {
   position: relative;
 }
 
-.tweet #Tweet_time {
+.tweet .Tweet_time {
   position: absolute;
   bottom: 1vw;
-  right:1vw;
+  right: 1vw;
   margin: 0;
   font-size: 0.7vw;
   color: grey;
@@ -294,6 +325,12 @@ nav a:hover {
   right: 0.5vw;
 }
 
+.tweet img {
+  width: 10vw;
+  height: auto;
+  margin-top: 0.5vw;
+}
+
 /*CREATE TWEETS  CREATE TWEETS  CREATE TWEETS  CREATE TWEETS  CREATE TWEETS  CREATE TWEETS  CREATE TWEETS  CREATE TWEETS*/
 
 
@@ -302,21 +339,15 @@ nav a:hover {
   color: white;
 }
 
-#createMain  > h1 {
+
+#createMain>h1 {
   margin: 4vw 0 0 8vw;
   font-size: 2vw;
 }
 
-#createMain  > div {
-  height: 100vh;
-  width: 50vw;
-  background-color: black;
-  margin: auto;
-  margin-top: -6.2vw;
-  padding: 1vw;
-  padding-top: 5vw;
-}
-#createMain  > div p {
+
+
+#createMain>div p {
   margin-top: 2vw;
 }
 
@@ -324,26 +355,23 @@ nav a:hover {
   display: grid;
   background-color: white;
   width: 40vw;
-  height: 45vh;
+  height: 28vh;
   margin: 0 4vw 0 4vw;
   border-radius: 0.4vw;
   color: black;
+  position: relative;
 
 }
 
 #createMain form div {
   padding: 1vw;
   display: grid;
-  
+
 }
 
-#createMain form div input{
-  padding: 1vw;
-  border-radius: 0.4vw;
-  border: none;
-  background-color: rgba(128, 128, 128, 0.486);
-}
-#createMain form div textarea{
+
+
+#createMain form div textarea {
   padding: 1vw;
   border-radius: 0.4vw;
   border: none;
@@ -358,7 +386,12 @@ nav a:hover {
 }
 
 
-
+#createMain form input[type=reset] {
+  position: absolute;
+  width: 10vw;
+  right: 1vw;
+  bottom: 8vh;
+}
 
 
 
@@ -370,12 +403,12 @@ nav a:hover {
   color: white;
 }
 
-#updatingMain > h1 {
+#updatingMain>h1 {
   margin: 4vw 0 0 10vw;
   font-size: 2vw;
 }
 
-#updatingMain> div {
+#updatingMain>div {
   height: 100vh;
   width: 50vw;
   background-color: black;
@@ -384,7 +417,8 @@ nav a:hover {
   padding: 1vw;
   padding-top: 5vw;
 }
-#updatingMain > div p {
+
+#updatingMain>div p {
   margin-top: 2vw;
 }
 
@@ -403,16 +437,17 @@ nav a:hover {
 #updatingMain form div {
   padding: 1vw;
   display: grid;
-  
+
 }
 
-#updatingMain form div input{
+#updatingMain form div input {
   padding: 1vw;
   border-radius: 0.4vw;
   border: none;
   background-color: rgba(128, 128, 128, 0.486);
 }
-#updatingMain form div textarea{
+
+#updatingMain form div textarea {
   padding: 1vw;
   border-radius: 0.4vw;
   border: none;
@@ -426,10 +461,86 @@ nav a:hover {
   font-size: 1.2vw;
 }
 
+
+
+/*MODULE    MODULE    MODULE    MODULE    MODULE    MODULE    MODULE    MODULE    MODULE    MODULE    MODULE    MODULE*/
+
+#updating_module {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20% 25% 20% 25%;
+  display: none;
+}
+
+#updating_module form {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  border-radius: 1vw;
+}
+
+
+
+#updating_module form div {
+  padding: 1vw;
+  display: grid;
+
+}
+
+#updating_module form div input {
+  padding: 1vw;
+  border-radius: 0.4vw;
+  border: none;
+  background-color: rgba(128, 128, 128, 0.486);
+  max-height: 8vw;
+}
+
+
+
+#updating_module form button {
+  appearance: none;
+  border: none;
+  border-radius: 0.4vw;
+  font-size: 1.2vw;
+  height: 5vw;
+  align-self: end;
+}
+
+#updating_module #close_update {
+  position: absolute;
+  top: 20.5vw;
+  right: 25.5vw;
+  cursor: pointer;
+
+}
+
+#updating_module #image_updating_div {
+  display: none;
+}
+
+/*PANEL   PANEL   PANEL   PANEL   PANEL   PANEL   PANEL   PANEL   PANEL   PANEL   PANEL   PANEL   PANEL   PANEL   PANEL   PANEL*/
+#tweet_panel_button {
+  position: absolute;
+  background-color: #00acee;
+  width: 10vw;
+  height: 5vw;
+  top: 13vw;
+  left: 10vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 1vw;
+}
+
 /*FOOTER  FOOTER   FOOTER   FOOTER   FOOTER   FOOTER   FOOTER   FOOTER   FOOTER   FOOTER   FOOTER   FOOTER   FOOTER */
 
-footer{
+footer {
   background-color: #00acee;
   width: 100%;
-  height:2vw;
+  height: 2vw;
 }

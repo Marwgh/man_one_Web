@@ -4,34 +4,73 @@
 <main id="tweetMain">
   <h1>Fake Tweets</h1>
   <div>
-    Want to <a href="/create">create</a> a tweet ?
-    % for tweet in tweets:
+    <div id="createMain">
+      <form onsubmit="validate(sendTweet); return false ">
+        <div>
+          <label for="tweet_description">Tweet</label>
+          <textarea name="tweet_description" id="tweet_description" cols="30" rows="5"
+            placeholder="What is in your mind ?" data-validate="str" data-min="1" data-max="150"></textarea>
+        </div>
+        <div>
+          <label for="input_image">Pick image ?</label>
+          <input type="file" id="input_image" name="tweet_image" accept="image">
+        </div>
 
+        <input type="reset">
 
-    <section class="tweet">
-      <h1>{{tweet["title"]}}</h1>
-      <p id="Tweet_time">{{tweet["iat"]}}</p>
-      <p>{{tweet["description"]}} </p>
-      <article>
-        <form action="/delete/{{tweet['id']}}" method="POST">
-          <button>🗑️</button>
-        </form>
-        <a
-          href="/updating?title={{tweet['title']}}&description={{tweet['description']}}&iat={{tweet['iat']}}&id={{tweet['id']}}">✏️</a>
-      </article>
-
-    </section>
-    % end
-
-
-    % if tweets == []:
-    <div>
-      no tweets registered
+        <button>Create</button>
+      </form>
     </div>
-    % end
+    <div id="tweets">
+
+    </div>
   </div>
   </div>
 
 </main>
+
+<div id="updating_module">
+  <div id="close_update">❌</div>
+  <form>
+    <div>
+      <label for="tweet_text_updator">Tweet Text</label>
+      <input type="text" name="tweet_text_updator" id="tweet_text_updator">
+    </div>
+    <div id="image_updating_div">
+      <img src="" alt="">
+      <label for="check_delete_image">Want to remove this image ?</label>
+      <input type="checkbox" name="check_delete_image" id="check_delete_image">
+    </div>
+    <button>Update</button>
+
+  </form>
+
+</div>
+
+<div id="user_tweets_module">
+  % for tweet in tweets :
+  % if user_id == tweet["user_id"] :
+  % if not tweet["image"] :
+  <section class="tweet">
+    <p class="Tweet_time">{{tweet["iat"]}}</p>
+    <p>{{tweet["description"]}} </p>
+
+  </section>
+
+  % else :
+  <section class="tweet">
+    <p class="Tweet_time">{{tweet["iat"]}}</p>
+    <p>{{tweet["description"]}} </p>
+    <img src="/image/{{tweet['image']}}" alt="">
+  </section>
+  % end
+  %end
+  % end
+</div>
+
+
+<div id="tweet_panel_button">
+  See your tweets ?
+</div>
 
 % include("footer")
