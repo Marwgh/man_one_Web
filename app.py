@@ -13,6 +13,8 @@ import signup_post                                        #POST
 import login_post                                         #POST
 import create_post                                        #POST
 
+import tweet_put                                          #PUT
+
 
 import users_get                                          #GET
 import login_get                                          #GET

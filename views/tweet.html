@@ -31,10 +31,14 @@
 
 <div id="updating_module">
   <div id="close_update">❌</div>
-  <form>
+  <form onsubmit="validate(updateTweet);  return false">
+    <div id="tweet_id_div">
+      <input type="text" name="tweet_id">
+    </div>
     <div>
       <label for="tweet_text_updator">Tweet Text</label>
-      <input type="text" name="tweet_text_updator" id="tweet_text_updator">
+      <input type="text" name="tweet_text_updator" id="tweet_text_updator" data-validate="str" data-min="1"
+        data-max="150">
     </div>
     <div id="image_updating_div">
       <img src="" alt="">
@@ -48,24 +52,8 @@
 </div>
 
 <div id="user_tweets_module">
-  % for tweet in tweets :
-  % if user_id == tweet["user_id"] :
-  % if not tweet["image"] :
-  <section class="tweet">
-    <p class="Tweet_time">{{tweet["iat"]}}</p>
-    <p>{{tweet["description"]}} </p>
 
-  </section>
 
-  % else :
-  <section class="tweet">
-    <p class="Tweet_time">{{tweet["iat"]}}</p>
-    <p>{{tweet["description"]}} </p>
-    <img src="/image/{{tweet['image']}}" alt="">
-  </section>
-  % end
-  %end
-  % end
 </div>
 
 

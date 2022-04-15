@@ -55,10 +55,10 @@ def _():
         g.TWEETS.append(tweet)
 
         is_image = "true"
-        return id , is_image
+        return id , is_image  , issue_time 
 
 
-      is_image = "false"
+      is_image = "fals"
     
       description = request.forms.get("tweet_description")
       id = str(uuid.uuid4())
@@ -68,7 +68,7 @@ def _():
       g.TWEETS.append(tweet)
 
 
-      return id
+      return id  , is_image , issue_time
 
 
     except Exception as ex:

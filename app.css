@@ -471,7 +471,7 @@ nav a:hover {
   height: 100vh;
   top: 0;
   background-color: rgba(0, 0, 0, 0.5);
-  padding: 20% 25% 20% 25%;
+  padding: 17% 25% 17% 25%;
   display: none;
 }
 
@@ -481,6 +481,7 @@ nav a:hover {
   height: 100%;
   display: grid;
   border-radius: 1vw;
+  min-width: 20vw;
 }
 
 
@@ -512,7 +513,7 @@ nav a:hover {
 
 #updating_module #close_update {
   position: absolute;
-  top: 20.5vw;
+  top: 17.5vw;
   right: 25.5vw;
   cursor: pointer;
 
@@ -520,7 +521,22 @@ nav a:hover {
 
 #updating_module #image_updating_div {
   display: none;
+  width: 10vw;
+  height: 10vw;
+
 }
+
+#updating_module #tweet_id_div {
+  display: none;
+}
+
+
+#updating_module #image_updating_div img {
+  width: 100%;
+  height: auto;
+}
+
+
 
 /*PANEL   PANEL   PANEL   PANEL   PANEL   PANEL   PANEL   PANEL   PANEL   PANEL   PANEL   PANEL   PANEL   PANEL   PANEL   PANEL*/
 #tweet_panel_button {
